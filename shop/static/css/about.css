@@ -1,0 +1,32 @@
+.about{
+    min-height: 100vh;
+    background-color: rgb(224, 224, 245);
+}
+.vision_container{
+    column-count: 2;
+    column-width: auto;
+    column-gap: normal;
+    background-color: navy;
+}
+.vision{
+    background-color: inherit;
+    color: white;
+
+}
+.vision_title{
+    background-color: inherit;
+    font-size: medium;
+    color: goldenrod;
+    
+}
+.mision{
+    background-color: inherit;
+    color: white;
+    
+}
+.mision{
+    background-color: inherit;
+    font-size: medium;
+    color: goldenrod;
+    
+}

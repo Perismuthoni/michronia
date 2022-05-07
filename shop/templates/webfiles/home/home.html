@@ -1,16 +1,28 @@
 {% extends '../../base.html' %}
 {% load static %}
 
-{% block css %}
-{% endblock %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 
 {% block body %}
+<div class="home">
+    <div class="desc">
+        <p> Mich & Ronia consultants is legally established and complies with all
+            laws and regulations. We aspire to be the best perceived Small and
+            Medium; Audit, Tax and, Financial Advisory Firm in Kenya.
+            Our portfolio of Organizations is representative of all sectors of the
+            economy and comprises; State Corporations, Non- Governmental
+            Organizations (both Local and international), Finance services sector,
+            Partnerships, Limited liability Companies, Real Estate Property and,
+            Professional Practitioners among other categories of clientele we
+            serve.
+            Our team members are professionals who are highly qualified and
+            experienced and who have an established track record in their
+            respective areas of expertise. </p>
+    </div>
+</div>
 
-{% block home %}
 
-<p> this is the home page </p>
-{% endblock %}
 {% endblock %}
 
 

@@ -1,16 +1,38 @@
-{% extends '../../base.html' %}
 {% load static %}
+{% extends '../../base.html' %}
 
-{% block css %}
-{% endblock %}
+
+<head>
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
 
 
 {% block body %}
+<div class="about">
+    <div class="vision_container">
+        <div class="vision">
+            <p class="vision_title"></p>
+            To be the leading
+accounting and
+financial services firm
+in Kenya.
+        </div>
 
-{% block home %}
 
-<p> this is the about us page </p>
-{% endblock %}
+        <div class="mission">
+            <p class="vision_title"></p>
+            To provide quality financial
+            and accounting services for the
+            benefit of our client’s welfare,
+            partners, employees and the
+            community.
+        </div>
+      </div>
+      <div class="core_values"></div>  
+
+</div>
+
+
 {% endblock %}
 
 
