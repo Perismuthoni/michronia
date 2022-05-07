@@ -3,14 +3,16 @@
 
 
 {% block body %}
+{% endblock %}
 
-<div> {% block home %} {% endblock %}  </div>  
+
+{% block home %} {% endblock %}
+
+<div>   </div>  
 <div> {% block services %} {% endblock %}  </div> 
 <div> {% block about %} {% endblock %}  </div> 
 <div> {% block contact %} {% endblock %}  </div> 
  
-
-{% endblock %}
 
 
 {% comment %} {% extends 'base.html' %}

@@ -13,6 +13,9 @@
     {% comment %} <title>{% block title %} {% endblock %}</title> {% endcomment %}
     <title> Mich &Ronia </title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+   {% block head %} {% endblock %}
+
 </head>
 
 <body>
@@ -45,5 +48,7 @@
 
    
 </body>
+
+<p class="footer">Mich & Ronia Consultants--------------------------------------</p>
 
 </html>

@@ -1,38 +1,54 @@
-{% load static %}
 {% extends '../../base.html' %}
+{% load static %}
 
 
-<head>
+{% block head %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
-</head>
-
+{% endblock %}
 
 {% block body %}
+{% block about %}
 <div class="about">
+    <div class="about_poster">
+        
+    </div>
+
     <div class="vision_container">
+
         <div class="vision">
-            <p class="vision_title"></p>
+            <p class="vision_title">VISION</p>
             To be the leading
-accounting and
-financial services firm
-in Kenya.
+           accounting and
+            financial services firm
+              in Kenya.
         </div>
 
-
         <div class="mission">
-            <p class="vision_title"></p>
+            <br/>
+            <p class="mission_title">MISSION</P>
             To provide quality financial
             and accounting services for the
             benefit of our client’s welfare,
             partners, employees and the
             community.
         </div>
+
       </div>
-      <div class="core_values"></div>  
+
+      <div class="core_values">
+          <p class="core_values_title"> CORE VALUES<p/>
+            <ul>
+                <li>An empowered workforce with passion for excellency and equal opportunities.  </li>
+                <li>Recognizing and responding effectively to the needs of our clients.  </li>
+                <li> Attention to safety & welfare.  </li>
+                <li> Outstanding Integrity. </li>
+                <hr></hr>
+                </ul>
+      </div>  
 
 </div>
 
-
+{% endblock %}
 {% endblock %}
 
 

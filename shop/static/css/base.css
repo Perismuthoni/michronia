@@ -86,6 +86,14 @@
                              color: goldenrod;}
   .dropdown:hover .navbar {background-color: inherit;}
 
+ .footer{
+    background-color: goldenrod;
+    color: #f2f2f2;
+    font-weight: lighter;
+    position: relative;
+    bottom: 0px;
+    text-align: justify;
+}
 
 
 
