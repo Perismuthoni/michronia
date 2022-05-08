@@ -110,7 +110,7 @@ USE_TZ = True
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'shop/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/static')
 MEDIA_URL = '/media/'
 
 
