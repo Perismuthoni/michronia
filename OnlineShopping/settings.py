@@ -1,7 +1,10 @@
 from pathlib import Path
+from django.conf import settings
 import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+os.path.join(os.path.dirname(os.path.dirname(__file__)),'media/documents/GDRAT.xls')
+base_dir =settings.MEDIA_ROOT 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
