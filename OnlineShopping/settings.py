@@ -5,7 +5,9 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 os.path.join(os.path.dirname(os.path.dirname(__file__)),'media/documents/GDRAT.xls')
 base_dir =settings.MEDIA_ROOT 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
