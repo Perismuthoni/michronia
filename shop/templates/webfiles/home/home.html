@@ -55,6 +55,7 @@
       font-size: 24px;
     }
     .keys{
+        color: black;
         font-weight: bold;
     }
     .Policy{
@@ -65,14 +66,74 @@
         text-align: center;
         color: black;
     }
+    .module {
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+}
+
+.top h2 {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+    width: 600px;
+    height: 400px;
+  color: goldenrod;
+  top: 80%;
+  margin: 0;
+  padding: 20px;
+}
+
+.mid h2 {
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+    width: 740px;
+    height: 400px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  padding: 20px;
+  color: gold;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 217%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+}
+
     
     </style>
-      <br style="clear: both;">
+    <div class="module top">
+        <h2>We work with various partners from different regions in and out of
+            the country. Our team is rich in professional, motivated, and skilled
+            people, competent to respond to the present and future challenges as
+            the market gets more and more demanding.</h2>
+      </div>
+      
+      <div class="module mid">
+        <h2>Therefore, by choosing Mich & Ronia Consultants, a client is assured
+            of satisfaction, commitment, excellence, and above all, great service
+            experience</h2>
+      </div>
+      
+    <br style="clear: both;">
+    <br><br><br><br><br><br><br><br><br><br>
+    <div>
     <h2 class="Policy">Mich & Ronia Consultants</h2>
     <p class="Quality">At Mich & Ronia Consultants we work closely with you to understand
     what you want to achieve,<br> and meet your needs at every stage of
     your personal and organization’s development with our full range of
-    services.</p>
+    services.</p></div>
     
     <div class="container">
         <img src="{% static 'images/Back-Base.webp' %}" alt="" class="image">
