@@ -1,6 +1,6 @@
 
 .navbar {
-  position: fixed;
+  position: relative;
   column-count: 2;
   width: 100%;
   height:140px;
@@ -95,18 +95,13 @@
   .dropdown:hover .navbar {background-color: inherit;}
 
   .footer {
-      position: static;
+      position: absolute;
       left: 0;
       bottom: 0;
       background-color: goldenrod;
       color: white;
       text-align: center;
 }
-
-
-
-
-
 h1,
 h2,
 h3,

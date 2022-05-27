@@ -17,7 +17,6 @@
    {% block head %} {% endblock %}
 
 </head>
-<body>
 
     <div class="navbar">
       <div class="logo">
@@ -30,10 +29,10 @@
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="#">Book keeping</a>
-              <a href="#">Tax consultancy</a>
-              <a href="#">Forensic accountancy</a>
-              <a href="#">Financial advisory</a>
+              <a href="/keeping/">Book keeping</a>
+              <a href="/consultancy/">Tax consultancy</a>
+              <a href="/Accountancy/">Forensic accountancy</a>
+              <a href="/Advisory/">Financial advisory</a>
             </div>
           </div> 
         <a href="/contact/">CONTACT_US</a>
@@ -41,19 +40,10 @@
         <a href="/about/">GET_A_QUOTE</a>
         </div>
         </div>
-
-      
-
-    {% block body %}
-    {% endblock %}
-
-   
-</body>
-<div class="footer" style="position: relative;">
-
+    {% block body %}{% endblock %}
+<div class="footer" style="position: static;">
 <p>Mich & Ronia Consultants</p>
   <p>PHONE: +254727336411</p>
  <p>Email: michroniaconsultants@gmail.com</p>
 </div>
-
 </html>
