@@ -4,6 +4,21 @@
 {% block css %}
 {% endblock %}
 {% block body %}
+<style>
+  .sched{
+    text-align: center;
+  }
+  .adv{
+    font-weight: bold;
+    font-size: large;
+  }
+</style>
+<br><br>
+<div class="sched"><p class="adv">Schedule a call with one of <br>our experienced advisors.<br></p>Questions need answers. 
+Sometimes you may not know what questions to ask, what is possible or how to take the first step. <br>
+That's why scheduling a call will help us to understand the key elements, 
+scope out what is possible, and in doing so, help you take the first steps.<br> So schedule a call today,
+ tomorrow, or at another time that suits you.</div>
 <div class="container py-2 mt-3">
     <h2>Contact Us</h2>
     <form method="post">{% csrf_token %}
