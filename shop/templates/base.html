@@ -17,15 +17,124 @@
    {% block head %} {% endblock %}
 
 </head>
+<style>
+.navbar {
+  position: fixed;
+  top: 0;
+  column-count: 2;
+  width: 100%;
+  height:80px;
+  background-color: #152238;
+  z-index: 1;
+
+}
+.logo{
+  position: relative;
+  float: left;
+  top: -8px;
+  left: 100px;
+  width: 10%;
+  height: 80px; ;
+}
+.logoimg{
+  width: 100%;
+  height: 100%;
+}
+.nav
+ a { 
+    color: black;     
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+  }
+  
+
+.dropbtn {
+    color: gold;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bolder;
+    background-color: inherit;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: gold;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: inherit;
+                              color: black;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: inherit;
+                             color: black;}
+  .dropdown:hover .navbar {background-color: inherit;}
+
+  .footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: goldenrod;
+      color: white;
+      text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: hsl(0, 0%, 30%);
+}
+
+.col-lg-4,
+.col-lg-6,
+.col-lg-8,
+.col-lg-12 {
+    margin-top: 10px;
+}
+</style>
 
     <div class="navbar">
       <div class="logo">
       {% load static %} <img class="logoimg" src={% static 'images/golden.png' %} alt="" />
     </div>
-        <div class="nav">
-        <a class="" href="/home/">HOME</a>
+      <div class="nav">
+        <a style="color: gold; font-weight: bolder;" href="/home/">HOME</a>
         <div class="dropdown">
-            <button class="dropbtn"> <a href="/services/">SERVICES </a>
+            <button class="dropbtn"> <a style="color: gold; font-weight: bolder;" href="/services/">SERVICES </a>
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
@@ -35,11 +144,10 @@
               <a href="/Advisory/">Financial advisory</a>
             </div>
           </div> 
-        <a href="/contact/">CONTACT_US</a>
-        <a href="/about/">ABOUT_Us</a>
-        <a href="/about/">GET_A_QUOTE</a>
-        </div>
-        </div>
+        <a style="color: gold; font-weight: bolder;" href="/contact/">CONTACT US</a>
+        <a style="color: gold; font-weight: bolder;" href="/about/">ABOUT US</a>
+        <a style="color: gold; font-weight: bolder;" href="/about/">GET A QUOTE</a>
+        </div></div> <br><br><br>
     {% block body %}{% endblock %}
 <div class="footer" style="position: static;">
 <p>Mich & Ronia Consultants</p>
