@@ -8,20 +8,113 @@
 
 {% block body %}
 {% block about %}
-<br><br>
-<div class="about">
-    <div class="row">
-        <div class="column" style="background-color:#aaa;">
-          <h2>Column 1</h2>
-          <p>Some text..</p>
-        </div>
-        <div class="column" style="background-color:#bbb;">
-          <h2>Column 2</h2>
-          <p>Some text..</p>
-        </div>
-      </div>
-      
+<style>
+.about{
+  top: 50%;
+  background-color: #fff;
+}
+.about_poster{
+  height: 400px;
+  width: 100%;
+}
+.vision_container{
+  column-count: 2;
+  column-width: 100%;
+  column-gap: normal;
+  background-color: navy;
+  height: 50%;
+  text-align: center;
+  text-overflow: clip;
 
+
+
+}
+.vision{
+  background-color: inherit;
+  color: white;
+  margin: auto;
+  margin-left: 30%;
+  margin-right: 30%;
+  
+
+}
+.vision_title,.core_values
+{
+  background-color: inherit;
+  font-size: medium;
+  color: goldenrod;
+  
+}
+.mission{
+  background-color: inherit;
+  color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  
+}
+.mission_title{
+  background-color: inherit;
+  font-size: medium;
+  color: goldenrod;
+  
+}
+.core_values{
+  color: navy;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+.row{
+  margin-left: 5%;
+}
+</style>
+<div class="about">
+  <div class="row">
+    <div class="column" style="background-color:#fff;">
+      <br><br>
+      <h2>About us</h2>
+      <p>Mich & Ronia consultants is legally established and complies with all
+  laws and regulations. We aspire to be the best perceived Small and
+  Medium; Audit, Tax and, Financial Advisory Firm in Kenya.
+  Our portfolio of Organizations is representative of all sectors of the
+  economy and comprises; State Corporations, Non- Governmental
+  Organizations (both Local and international), Finance services sector,
+  Partnerships, Limited liability Companies, Real Estate Property and,
+  Professional Practitioners among other categories of clientele we
+  serve.
+  Our team members are professionals who are highly qualified and
+  experienced and who have an established track record in their
+  respective areas of expertise.</p>
+    </div>
+    <div class="column" style="background-color:#fff; max-height:1440px;">
+      <br><br>
+      <h2>Our Professionalism</h2>
+      <p>The Firm is recognized by the following regulatory and professional
+  organizations;<br>
+  1. Institute of Certified Public Accountants Kenya (ICPAK)<br>
+  2. Kenya Banker’s Association (KBA)<br>
+  3. Kenya Revenue Authority (KRA)<br>
+  4. Commissioner of Co-operatives - Ministry of Industrialization and
+  Enterprise Development<br>
+  5. Savings Societies Regulatory Authority (SASRA)<br><br><br><br><br><br><br></p>
+    </div>
+  </div>
     <div class="about_poster">
 
     <div class="vision_container">
@@ -45,7 +138,7 @@
         </div>
         </div>
       <div class="core_values">
-          <p class="core_values_title"> CORE VALUES<p/>
+          <p class="core_values_title"> CORE VALUES</p>
             <ul>
                 <li>An empowered workforce with passion for excellency and equal opportunities.  </li>
                 <li>Recognizing and responding effectively to the needs of our clients.  </li>
