@@ -13,8 +13,53 @@
 {% block home %}
 <div class="home">
 <style>
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.block-parallax-1 {
+    overflow: hidden;
+    position: relative;
+}
+.block-parallax-1 .parallax-bg {
+    background-attachment: fixed;
+    background-image: url("/static/images/citywall.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    min-width: 1170px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.block-parallax-1 .md-box {
+    padding: 200px 0 200px;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    height: 100%;
+    text-align: left;
+}
+.block-parallax-1 .md-box h1 {
+    color: #fff;
+}
+
+.block-parallax-2 .parallax-bg { 	
+	background-image: url("/static/images/city.jpg");
+}
+
+
+
+h2 {
+    color: black;
+    text-align: center; 
+    padding: 25px 0;
+    margin: 0;
+}
     .home{
-        background-color: #ccc;
+     background-color: #ccc;
     }
     .container {
       position: relative;
@@ -110,9 +155,27 @@
   font-size: 2rem;
   transform: translate(-50%, -50%);
 }
-
-    
     </style>
+    <section class="block-parallax-1">
+      <div class="parallax-bg"></div>
+      <div class="md-box">
+           <h1>We at MichRonia are Moving Businesses<br> To The Next LeveI Being the <br>
+            Top Tier Business Consulting</h1>
+      </div>
+  </section>
+      
+      <section style="min-height:400px;">
+          <h2>background</h2>
+   <p></p>
+      </section>
+  
+  <section class="block-parallax-1  block-parallax-2">
+      <div class="parallax-bg"></div>
+      <div class="md-box">
+           <h1>We offer best quality and wide range services.<br> Whatever the financial
+            service that is required, <br> Mich & Ronia is what you need.</h1>
+      </div>
+  </section>
     <div class="module top">
         <h2>We work with various partners from different regions in and out of
             the country. Our team is rich in professional, motivated, and skilled
