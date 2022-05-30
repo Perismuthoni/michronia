@@ -4,17 +4,23 @@
 {% block css %}
 {% endblock %}
 {% block body %}
+
 <style>
+  .container{
+    margin-right: 20%;
+    margin-left: 25%;
+  }
   .sched{
-    text-align: center;
+    margin-left: 25%;
   }
   .adv{
+    font-size: 27px;
     font-weight: bold;
     font-size: large;
   }
 </style>
 <br><br>
-<div class="sched"><p class="adv">Schedule a call with one of <br>our experienced advisors.<br></p>Questions need answers. 
+<div class="sched"><p class="adv">Schedule a call with us today <br>and experience professionalism.<br></p>Questions need answers. 
 Sometimes you may not know what questions to ask, what is possible or how to take the first step. <br>
 That's why scheduling a call will help us to understand the key elements, 
 scope out what is possible, and in doing so, help you take the first steps.<br> So schedule a call today,
@@ -40,14 +46,9 @@ scope out what is possible, and in doing so, help you take the first steps.<br> 
    <textarea class="form-control mt-2" id="desc" name="desc" rows="3"></textarea>
  </div>
  <button type="submit" style="background-color: #8c5d4f; color: white; width: 8rem;" class="btn mt-4">Submit</button>
+ </div>
 </form>
+</div>
 {% endblock %}
-{% block js %}
-<script>
-  '{ if alert }'
-  alert("We will contact you soon!!!");
-  document.location = "/"
-  '{ endif }'
-</script>
-{% endblock %}
+
 

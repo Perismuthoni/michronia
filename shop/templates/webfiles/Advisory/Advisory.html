@@ -13,7 +13,7 @@
 <div class="home">
     <style>
         .home{
-            background-color: #ccc;
+            background-color: #fff;
         }
         * {
   box-sizing: border-box;
@@ -42,12 +42,16 @@
   text-align: center;
   font-style: italic;
 }
+.row{
+  margin-left: 5%;
+  margin-right: 5%;
+}
     </style>
     <br>
     <h2 class="fin">From Us To You</h2>
 
     <div class="row">
-      <div class="column" style="background-color:#aaa; border-right: 8px solid goldenrod;">
+      <div class="column" style="background-color:#fff;">
         <h2>FINANCIAL ADVISORY</h2>
         <p>This is basically offering our clients a big picture analysis 
           of their finances by breaking down different aspects of a client's financial 
@@ -58,17 +62,18 @@
           track to achieve your financial goals. 
         </p>
       </div>
-      <div class="column" style="background-color:#bbb;">
+      <div class="column" style="background-color:#fff;">
         <h2>INTERNAL AUDIT</h2>
         <p>This is basically on matters risk management and evaluates the effectiveness of
            a company's internal controls, corporate governance, and accounting processes. 
            Internal audits provide management and board of directors with a value-added service 
            where flaws in a process may be caught and corrected prior to external audits.
           </p></div>
-          <div>
-            <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
-          </div>
+          
       </div>
+    </div>
+    <div>
+      <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
     </div>
 {% endblock%}
 {% endblock %}

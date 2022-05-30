@@ -13,7 +13,7 @@
 <div class="home">
     <style>
         .home{
-            background-color: #ccc;
+            background-color: #fff;
         }
         * {
   box-sizing: border-box;
@@ -42,12 +42,16 @@
   text-align: center;
   font-style: italic;
 }
+.row{
+  margin-left: 5%;
+  margin-right: 5%;
+}
     </style>
     <br>
     <h2 class="fore">From Us To You...</h2>
 
     <div class="row">
-      <div class="column" style="background-color:#aaa; border-right: 8px solid goldenrod;">
+      <div class="column" style="background-color:#fff">
         <h2>FORENSIC ACCOUNTING</h2>
         <p>Forensic accounting is the use of accounting skills to investigate fraud, 
           embezzlement and other irregularities hidden as financial transactions. 
@@ -56,17 +60,18 @@
            Fraudulent activity and general financial discrepancies cost the business community 
            extraordinary sums of money, every hour of every day</p>
       </div>
-      <div class="column" style="background-color:#bbb;">
-        <h2>THE SKILLS WE USE TO ACHIEVE OUR GOALS</h2>
+      <div class="column" style="background-color:#fff;">
+        <h2>ACHIEVING OUR GOALS</h2>
         <p>Forensic accounting utilizes accounting, auditing, and investigative 
           skills to conduct an examination into the finances of an individual or business.
         </p></div>
-        <div>
-          <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
-        </div>
       </div>
     </div>
+  </div>
+  <div>
+    <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
+  </div>
 {% endblock%}
 {% endblock %}
-</div>
+
 </html>

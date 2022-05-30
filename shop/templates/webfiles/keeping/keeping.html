@@ -13,7 +13,7 @@
 <div class="home">
     <style>
         .home{
-            background-color: #ccc;
+            background-color: #fff;
         }
         * {
   box-sizing: border-box;
@@ -42,12 +42,16 @@
   text-align: center;
   font-style: italic;
 }
+.row{
+  margin-left: 5%;
+  margin-right: 5%;
+}
     </style>
     <br>
     <h2 class="keep">From Us To You...</h2>
 
     <div class="row">
-      <div class="column" style="background-color:#aaa; border-right: 8px solid goldenrod;">
+      <div class="column" style="background-color:#fff;">
         <h2>BOOK KEEPING</h2>
         <p>Bookkeeping is a process of recording and organizing all 
           the business transactions that have occurred in the course of the business.
@@ -60,7 +64,7 @@
 
         </p>
       </div>
-      <div class="column" style="background-color:#bbb;">
+      <div class="column" style="background-color:#fff;">
         <h2>It basically involves;</h2>
         <p>
           1) analyzing financial transactions and assigning them to specific accounts;<br> 
@@ -69,11 +73,11 @@
           4) adjusting entries at the end of each accounting period.
           </p>
           </div>
-          <div>
-          <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
-        </div>
         <br>
       </div>
+    </div>
+    <div>
+      <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
     </div>
 {% endblock%}
 {% endblock %}
