@@ -9,7 +9,59 @@
 {% block body %}
 
 {% block services %}
-<div class="services" style="background-color: #ddd;">
+<style>
+.services{
+  background-color: #ccc;
+}
+.Serve{
+  padding-left: -20px;
+  text-align: center;
+  text-indent: 30px;
+}
+.text1{
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+.row{
+  width: 100%;
+  align-content: center;
+  padding-top: 0px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  color: white;  
+  margin-left: 50px;
+  height: 300px; 
+  overflow: hidden;
+  width: 20%;
+
+   /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    margin: auto;
+  }
+}
+#keep{
+  color: white;
+  text-align: center;
+  margin-left: 50px;
+  background-image: linear-gradient(to right, #152238,#292f38, gold);
+  width: 20%;
+  height:80px;
+}
+</style>
+<div class="services" style="background-color: #ccc;">
 <h1 class="Serve" style="text-align: center;"> Michronia Services </h1>
 <p class="text1" style="background-color: #ccc; width: 50em; margin-left: auto; margin-right: auto; font-weight: bold;">
     Michronia offers four main services for clients - Orientation, Training, Coaching and
@@ -19,41 +71,41 @@
      Please contact us for further information.
 </p>
 <div class="row">
-    <div class="column" style="background-color:#aaa; width: 25%;">
-      <h2>BOOK KEEPING SERVICES</h2>
-      <p>Bookkeeping is the process of recording financial transactions on a day-to-day 
+  <div id="keep">BOOK KEEPING</div>
+  <div id="keep">FORENSIC ACCOUNTANCY</div>
+  <div id="keep">TAX CONSULTANCY</div>
+  <div id="keep">FINANCIAL ADVISORY</div>
+</div>
+<div class="row">
+    <div class="column" style="background-color: navy; width: 20%;">
+      <p class="keep-text">Bookkeeping is the process of recording financial transactions on a day-to-day 
           basis by a business. It helps to ensure that the records of every individual financial 
           transaction are up-to-date and accurate. Individuals or entities that carry out the 
-          bookkeeping process are known as bookkeepers. The bookkeepers are responsible for classifying, 
-          recording and organising every financial transaction made
-           in the course of the business operations. </p>
+          bookkeeping process are known as bookkeepers. </p>
     </div>
-    <div class="column" style="background-color:#bbb; width: 25%;">
-      <h2>FORENSIC ACCOUNTANCY</h2>
+    <div class="column" style="background-color: navy; width: 20%;">
       <p>Forensic accounting utilizes accounting, auditing, and investigative 
           skills to conduct an examination into the finances of an individual or business. 
           Forensic accounting provides an accounting analysis suitable to be used in legal proceedings. 
           Forensic accountants are trained to look beyond the numbers and deal with the business 
-          reality of a situation. Forensic accounting is frequently used in fraud and embezzlement
-        cases to explain the nature of a financial crime in court</p>
+          reality of a situation.</p>
     </div>
-    <div class="column" style="background-color: #ccc; width: 25%;">
-      <h2>TAX CONSULTANCY</h2>
+    <div class="column" style="background-color: navy; width: 20%;">
       <p>Preparing your tax return
         Looking for deductions to lower your tax burden
         Minimizing your tax liability in retirement
         Dealing with taxes on rental property income
         Helping manage your capital gains taxes
-        Sorting through the tax implications of life events, like marriages, divorces, deaths and births</p>
+        Sorting through the tax implications of life events, like marriages, divorces, deaths and births.</p>
     </div>
-    <div class="column" style="background-color:#ddd; width: 25%;">
-      <h2>FINANCIAL ADVISORY</h2>
+    <div class="column" style="background-color: navy; width: 20%;">
       <p>A financial advisor is not just someone who manages your investments. 
           An advisor can help you figure out your savings, how to build for retirement,
            help with estate planning, and others. If however you only need to discuss portfolio allocations, 
            they can do that too</p>
     </div>
   </div>
+  <br>
   <div>
     <img src="{% static 'images/sky3.jpg' %}" style="width:100%">
   </div>
