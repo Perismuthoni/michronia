@@ -34,13 +34,18 @@
 .column {
   color: white;  
   margin-left: 50px;
-  height: 300px; 
+  height: 380px; 
   overflow: hidden;
   width: 20%;
-
-   /* Should be removed. Only for demonstration */
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  transition: transform .2s;
 }
-
+.column:hover{
+  -ms-transform: scale(110%); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(110%);
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -51,17 +56,24 @@
   .column {
     margin: auto;
   }
+  
 }
-#keep{
-  color: white;
+.keep{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: -5%;
+  margin-right: -5%;
   text-align: center;
-  margin-left: 50px;
   background-image: linear-gradient(to right, #152238,#292f38, gold);
-  width: 20%;
-  height:80px;
+}
+.keep:hover{
+  -ms-transform: scale(105%); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(105%);
 }
 </style>
 <div class="services" style="background-color: #ccc;">
+  <br><br>
 <h1 class="Serve" style="text-align: center;"> Michronia Services </h1>
 <p class="text1" style="background-color: #ccc; width: 50em; margin-left: auto; margin-right: auto; font-weight: bold;">
     Michronia offers four main services for clients - Orientation, Training, Coaching and
@@ -69,29 +81,26 @@
      We don't set minimum or maximum limits on either the size of our clients or the extent 
      of the assistance they might need, and each assignment we work on is tailored accordingly.  
      Please contact us for further information.
-</p>
-<div class="row">
-  <div id="keep">BOOK KEEPING</div>
-  <div id="keep">FORENSIC ACCOUNTANCY</div>
-  <div id="keep">TAX CONSULTANCY</div>
-  <div id="keep">FINANCIAL ADVISORY</div>
-</div>
+</p><br>
 <div class="row">
     <div class="column" style="background-color: navy; width: 20%;">
-      <p class="keep-text">Bookkeeping is the process of recording financial transactions on a day-to-day 
+      <div class="keep">BOOK <br> KEEPING</div>
+      <p><br>Bookkeeping is the process of recording financial transactions on a day-to-day 
           basis by a business. It helps to ensure that the records of every individual financial 
           transaction are up-to-date and accurate. Individuals or entities that carry out the 
           bookkeeping process are known as bookkeepers. </p>
     </div>
     <div class="column" style="background-color: navy; width: 20%;">
-      <p>Forensic accounting utilizes accounting, auditing, and investigative 
-          skills to conduct an examination into the finances of an individual or business. 
+      <div class="keep">FORENSIC <br> ACCOUNTANCY</div>
+      <p><br>Forensic accounting utilizes accounting, auditing, and investigative 
+          skills to conduct an examination into the finances individuals or business. 
           Forensic accounting provides an accounting analysis suitable to be used in legal proceedings. 
           Forensic accountants are trained to look beyond the numbers and deal with the business 
           reality of a situation.</p>
     </div>
     <div class="column" style="background-color: navy; width: 20%;">
-      <p>Preparing your tax return
+      <div class="keep">TAX <br>CONSULTANCY</div>
+      <p><br>Preparing your tax return
         Looking for deductions to lower your tax burden
         Minimizing your tax liability in retirement
         Dealing with taxes on rental property income
@@ -99,13 +108,14 @@
         Sorting through the tax implications of life events, like marriages, divorces, deaths and births.</p>
     </div>
     <div class="column" style="background-color: navy; width: 20%;">
-      <p>A financial advisor is not just someone who manages your investments. 
+      <div class="keep">FINANCIAL <br>ADVISORY</div>
+      <p><br>A financial advisor is not just someone who manages your investments. 
           An advisor can help you figure out your savings, how to build for retirement,
            help with estate planning, and others. If however you only need to discuss portfolio allocations, 
            they can do that too</p>
     </div>
   </div>
-  <br>
+  <br><br>
   <div>
     <img src="{% static 'images/sky3.jpg' %}" style="width:100%;">
   </div>

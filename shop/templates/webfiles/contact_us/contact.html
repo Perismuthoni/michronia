@@ -1,30 +1,36 @@
 {% extends '../../base.html' %}
 {% load static %}
 {% block title %} Contact Us {% endblock %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 {% block css %}
 {% endblock %}
 {% block body %}
 
 <style>
-  .container{
-    margin-right: 20%;
+  .form-control.mt-2{
+    width: 80%;
+
+  }
+  .container.py-2.mt-3{
+    width: 70%;
+    margin-right: 10%;
     margin-left: 25%;
   }
   .sched{
     margin-left: 25%;
   }
   .adv{
-    font-size: 27px;
+    font-size: 45px;
     font-weight: bold;
-    font-size: large;
   }
 </style>
 <br><br>
 <div class="sched"><p class="adv">Schedule a call with us today <br>and experience professionalism.<br></p>Questions need answers. 
-Sometimes you may not know what questions to ask, what is possible or how to take the first step. <br>
+Sometimes you may not know what questions to ask,<br> what is possible or how to take the first step.<br> <br>
 That's why scheduling a call will help us to understand the key elements, 
-scope out what is possible, and in doing so, help you take the first steps.<br> So schedule a call today,
- tomorrow, or at another time that suits you.</div>
+scope out what is possible, <br>and in doing so, help you take the first steps.<br><br> So schedule a call today,
+ tomorrow, or at another time that suits you.<br><br></div>
 <div class="container py-2 mt-3">
     <h2>Contact Us</h2>
     <form method="post">{% csrf_token %}
