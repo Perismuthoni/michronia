@@ -9,7 +9,7 @@ from . inherit import cartData
 from django.core import serializers
 
 def index(request):
-    return render(request, "index.html",)
+    return render(request, "webfiles/home/home.html",)
 
 def home(request):
     return render(request, "webfiles/home/home.html",)

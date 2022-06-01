@@ -8,6 +8,9 @@
 {% block body %}
 
 <style>
+  .contact-page{
+    height: fit-content;
+  }
   .form-control.mt-2{
     width: 80%;
 
@@ -24,36 +27,87 @@
     font-size: 45px;
     font-weight: bold;
   }
+  .consultancy-location{
+    column-count: 2;
+  }
+  .mapouter{position:relative;text-align:right;height:500px;width:600px;}
+  .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+  .socials{color: black}
 </style>
 <br><br>
+<div class="contact-page">
+
 <div class="sched"><p class="adv">Schedule a call with us today <br>and experience professionalism.<br></p>Questions need answers. 
-Sometimes you may not know what questions to ask,<br> what is possible or how to take the first step.<br> <br>
-That's why scheduling a call will help us to understand the key elements, 
-scope out what is possible, <br>and in doing so, help you take the first steps.<br><br> So schedule a call today,
- tomorrow, or at another time that suits you.<br><br></div>
+ Sometimes you may not know what questions to ask,<br> what is possible or how to take the first step.<br> <br>
+ That's why scheduling a call will help us to understand the key elements, 
+ scope out what is possible, <br>and in doing so, help you take the first steps.<br><br> So schedule a call today,
+ tomorrow, or at another time that suits you.<br><br>
+</div>
+
 <div class="container py-2 mt-3">
     <h2>Contact Us</h2>
-    <form method="post">{% csrf_token %}
+
+<form method="post">{% csrf_token %}
+
  <div class="form-group mt-2">
    <label>Name</label>
-   <input type="text" class="form-control mt-2" id="name" name="name" placeholder="Enter Your Name">
+   <input type="text" class="form-control mt-2" id="name" name="name" placeholder="Enter Your Name"/>
  </div>
-         <div class="form-group mt-2">
+
+ <div class="form-group mt-2">
    <label>Email</label>
    <input type="email" class="form-control mt-2" id="email" name="email" placeholder="Enter Your Email">
  </div>
-         <div class="form-group mt-2">
+
+ <div class="form-group mt-2">
    <label>Phone</label>
    <input type="number" class="form-control mt-2" id="phone" name="phone" placeholder="Enter Your Phone Number">
  </div>
-         <div class="form-group">
+
+ <div class="form-group mt-2">
+   <label >Choose service:</label>
+   <select class="form-control mt-2" name="service" id="service">
+   <option value="tax">Tax</option>
+   <option value="book-keeping">Book-keeping</option>
+   <option value="financial-advisory">Financial-advisory</option>
+   <option value="forensic-accounting">Forensic-accounting</option>
+   <option value="other">other</option>
+   </select>
+
+  </div>
+
+        
   <div class="form-group mt-2">
    <label>How May We Help You ?</label>
    <textarea class="form-control mt-2" id="desc" name="desc" rows="3"></textarea>
  </div>
+
  <button type="submit" style="background-color: #8c5d4f; color: white; width: 8rem;" class="btn mt-4">Submit</button>
- </div>
+
+ 
 </form>
+</div>
+
+
+<div class="consultancy-location">
+
+<div class="mapouter">
+  <div class="gmap_canvas">
+  <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kiambu%20road&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> 
+  </iframe>
+  <a href="https://www.embedgooglemap.net"></a> 
+</div>
+</div>
+
+<div class="socials">
+ <h2> Follow us on </h2>  
+</div>
+
+</div>
+
+
+
+
 </div>
 {% endblock %}
 
