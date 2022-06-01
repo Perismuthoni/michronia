@@ -47,21 +47,21 @@
 <div class="container py-2 mt-3">
     <h2>Contact Us</h2>
 
-<form method="post">{% csrf_token %}
+<form method="post">{% csrf_token %}   {{form.as_p}}
 
  <div class="form-group mt-2">
    <label>Name</label>
-   <input type="text" class="form-control mt-2" id="name" name="name" placeholder="Enter Your Name"/>
+   <input type="text" class="form-control mt-2" id="full_name" name="full_name" placeholder="Enter Your Name"/>
  </div>
 
  <div class="form-group mt-2">
    <label>Email</label>
-   <input type="email" class="form-control mt-2" id="email" name="email" placeholder="Enter Your Email">
+   <input type="email" class="form-control mt-2" id="email_address" name="email_address" placeholder="Enter Your Email">
  </div>
 
  <div class="form-group mt-2">
    <label>Phone</label>
-   <input type="number" class="form-control mt-2" id="phone" name="phone" placeholder="Enter Your Phone Number">
+   <input type="number" class="form-control mt-2" id="phone_number" name="phone_number" placeholder="Enter Your Phone Number">
  </div>
 
  <div class="form-group mt-2">
@@ -79,7 +79,7 @@
         
   <div class="form-group mt-2">
    <label>How May We Help You ?</label>
-   <textarea class="form-control mt-2" id="desc" name="desc" rows="3"></textarea>
+   <textarea class="form-control mt-2" id="message" name="message" rows="3"></textarea>
  </div>
 
  <button type="submit" style="background-color: #8c5d4f; color: white; width: 8rem;" class="btn mt-4">Submit</button>

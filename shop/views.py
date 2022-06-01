@@ -1,4 +1,5 @@
 from django.http.response import HttpResponse
+from django.core.mail import send_mail, BadHeaderError
 from django.shortcuts import render, redirect
 from .models import *
 from django.http import JsonResponse
@@ -7,6 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from . inherit import cartData
 from django.core import serializers
+from .forms import ContactForm
 
 def index(request):
     return render(request, "webfiles/home/home.html",)
@@ -40,6 +42,53 @@ def contact(request):
         alert = True
         return render(request, 'webfiles/contact_us/contact.html', {'alert':alert})
     return render(request, "webfiles/contact_us/contact.html")
+
+# def contact(request):
+#     	if request.method == "POST":
+#          form = ContactForm(request.POST)
+#          if form.is_valid():
+#              subject = "Website Inquiry"
+#              body = {
+# 			'full_name': form.cleaned_data['full_name'],
+#             'email_address': form.cleaned_data['email_address'],
+#             'phone_number': form.cleaned_data['phone_number'],
+# 			'service': form.cleaned_data['last_name'],			 
+# 			'message':form.cleaned_data['message'], 
+# 			}
+#              message = "\n".join(body.values())
+                         
+#              try:
+#                   send_mail(subject, message, 'muthonimuriuki22@gmail.com', ['muthonimuriuki22@gmail.com'])
+#              except BadHeaderError:
+#                   return HttpResponse('Invalid header found.')
+#              return redirect ("webfiles/home/home.html")
+         
+#          form = ContactForm()
+#          return render(request, "webfiles/contact_us/contact.html", {'form':form})
+                                        
+			    
+        
+		
+				
+			
+      
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
