@@ -52,6 +52,7 @@
 
 
 
+
 h2 {
     color: black;
     text-align: center; 
@@ -182,13 +183,18 @@ h2 {
   width: 5%;
 }
 .prunus{
-  width: 15%;
+  width: 10%;
 }
 .loud{
   width: 15%;
 }
 .marq{
-  padding-left: 27%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.md-box{
+  margin: 0px 0 0 10px;
+  font-style: italic;
 }
     </style>
     <section class="block-parallax-1">
@@ -264,10 +270,15 @@ h2 {
         Our loyal and long-term clients include;
         </p>
       <p class="marq">
+        <!-- <marquee behaviour="scroll" scrollamount="15" onmouseover="this.stop();" onmouseout="this.start();"> -->
         <img src="{% static 'images/Bamm.png' %}" class="Bamm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <img src="{% static 'images/kell.png' %}" class="kell">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{% static 'images/sibasi.png' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{% static 'images/lbc.png' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="{% static 'images/electric.jpeg' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <img src="{% static 'images/loud.jpg' %}" class="loud">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <img src="{% static 'images/prunus.webp' %}" class="prunus">
+      <!-- </marquee> -->
         </p>
     </div>
 </div>  

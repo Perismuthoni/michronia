@@ -4,13 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
 {% block body %}
+{% block conatct %}
 
 <style>
-  .contact-page{
-    height: fit-content;
-  }
+   .contact-page{
+    height: fit-content; 
+  } 
   .form-control.mt-2{
     width: 80%;
 
@@ -32,7 +34,34 @@
   }
   .mapouter{position:relative;text-align:right;height:500px;width:600px;}
   .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
-  .socials{color: black}
+  .socials{color: black
+  }
+  /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  background: #bb0000;
+  color: white;
+} */
+
+.fa-instagram {
+   background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.fa-whatsapp {
+  background: #008000;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
 </style>
 <br><br>
 <div class="contact-page">
@@ -101,14 +130,19 @@
 
 <div class="socials">
  <h2> Follow us on </h2>  
+ <!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a><br><br>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-whatsapp"></a>
+<a href="#" class="fa fa-skype"></a>
 </div>
-
 </div>
-
-
-
-
 </div>
+{% endblock %}
 {% endblock %}
 
 

@@ -16,6 +16,7 @@
 
    {% block head %} {% endblock %}
 </head>
+
 <style>
 .navbar {
   position: fixed;
@@ -26,8 +27,6 @@
   background-color: #152238;
   z-index: 1;
 }
-
-
 .logo{
   position: relative;
   float: left;
@@ -48,8 +47,24 @@
     text-decoration: none;
     font-size: 17px;
     font-weight: bolder;
+    font-family: Lithos Pro;
   }
+  .nav a{
+  		padding: 10px;
+  		cursor: pointer;
+  		font-size: 16px;
+  	}
+    .nav a:after{
+      content: '';
+      display: block;
+        border-bottom: 2px solid goldenrod;
+        transform: scaleX(0);
+        transition: .2s ease-in-out;
+    }
+  	.nav a:hover:after{
+  	   transform: scaleX(1);
   
+    }
   /* visited link */
   a:visited {
     color: black;
@@ -59,8 +74,6 @@
   a:hover {
     color: black;
   }
-  
-
 .dropbtn {
     color: gold;
     text-align: right;
@@ -73,6 +86,7 @@
   }
   
   .dropdown {
+    padding: 9px 15px;
     position: relative;
     display: inline-block;
   }
@@ -97,9 +111,6 @@
                               color: black;}
   
   .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: inherit;
-                             color: black;}
   .dropdown:hover .navbar {background-color: inherit;}
 
   .footer {
@@ -125,10 +136,6 @@ h6 {
 .col-lg-12 {
     margin-top: 10px;
 }
-
-
-
-
 
 .navbar .icon {
   display: none;
@@ -169,9 +176,8 @@ h6 {
       <div class="nav">
         <a style="color: gold; font-weight: bolder;" href="/home/">HOME</a>
         <div class="dropdown">
-            <button class="dropbtn"> <a style="color: gold; font-weight: bolder;" href="/services/">SERVICES </a>
+             <a style="color: gold; font-weight: bolder;" href="/services/">SERVICES </a>
               <i class="fa fa-caret-down"></i>
-            </button>
             <div class="dropdown-content">
               <a href="/keeping/">Book keeping</a>
               <a href="/consultancy/">Tax consultancy</a>
@@ -200,6 +206,6 @@ h6 {
     {% block body %}{% endblock %}
 <div class="footer" style="position: static;">
 <p>Mich & Ronia Consultants ||   +254727336411   || Email: michroniaconsultants@gmail.com</p>
-<p>Copyright © 2022 Mich&Ronia Consultants | Powered by @Mich&Ronia </p>
+<p>Copyright © 2022 Mich&Ronia Consultants | Powered by Pollad-Technologies </p>
 </div>
 </html>
