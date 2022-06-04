@@ -15,7 +15,7 @@
 </head>
 
 
-<div class="navbar" id="myTopnav">
+<div class="navbar">
     <div class="logo">
         {% load static %} <img class="logoimg" src={% static 'images/golden.png' %} alt="" />
     </div>
@@ -35,22 +35,7 @@
         <a style="color: gold; font-weight: bolder;" href="/about/">ABOUT US</a>
         <a style="color: gold; font-weight: bolder;" href="/testimonials/">TESTIMONIALS</a>
     </div>
-</div> <br><br><br>
-
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "navbar") {
-            x.className += " responsive";
-        } else {
-            x.className = "navbar";
-        }
-    }
-</script>
-
-
-{% block body %}{% endblock %}
+</div> <br><br><br> {% block body %}{% endblock %}
 <div class="footer" style="position: static;">
     <p>Mich & Ronia Consultants || +254727336411 || Email: michroniaconsultants@gmail.com</p>
     <p>Copyright © 2022 Mich&Ronia Consultants | Powered by Pollad-Technologies </p>

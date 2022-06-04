@@ -1,287 +1,268 @@
-{% extends '../../base.html' %}
-{% load static %}
-<!doctype html>
+{% extends '../../base.html' %} {% load static %} {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% block css %}
-{% endblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1"> {% block css %} {% endblock %}
 <title>Mich&Ronia</title>
-{% block head %} 
-{% endblock %}
-{% block body %}
-{% block home %}
+{% endblock %} {% block body %} {% block home %}
 <div class="home">
-<style>
- * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.block-parallax-1 {
-    overflow: hidden;
-    position: relative;
-}
-.block-parallax-1 .parallax-bg {
-    background-attachment: fixed;
-    background-image: url("/static/images/citywall.jpg");
-    background-position: 0px 0px;
-    background-repeat: repeat;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    min-width: 1170px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-.block-parallax-1 .md-box {
-    padding: 200px 0 200px;
-    background: rgba(0, 0, 0, 0);
-    position: relative;
-    height: 100%;
-    text-align: left;
-}
-.block-parallax-1 .md-box h1 {
-    color: #fff;
-}
 
-.block-parallax-2 .parallax-bg { 	
-	background-image: url("/static/images/city.jpg");
-}
+    <!-- <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .block-parallax-1 {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .block-parallax-1 .parallax-bg {
+            background-attachment: fixed;
+            background-image: url("/static/images/citywall.jpg");
+            background-position: 0px 0px;
+            background-repeat: repeat;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            min-width: 1170px;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+        
+        .block-parallax-1 .md-box {
+            padding: 200px 0 200px;
+            background: rgba(0, 0, 0, 0);
+            position: relative;
+            height: 100%;
+            text-align: left;
+        }
+        
+        .block-parallax-1 .md-box h1 {
+            color: #fff;
+        }
+        
+        .block-parallax-2 .parallax-bg {
+            background-image: url("/static/images/city.jpg");
+        }
+        
+        h2 {
+            color: black;
+            text-align: center;
+            padding: 25px 0;
+            margin: 0;
+        }
+        
+        .home {
+            background-color: #ccc;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: max-content;
+            background-clip: cover;
+        }
+        
+        .image {
+            opacity: 1;
+            width: 100%;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: justify;
+        }
+        
+        .container:hover .image {
+            opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+            opacity: 1;
+        }
+        
+        .text {
+            color: black;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .keys {
+            color: black;
+            font-weight: bold;
+        }
+        
+        .Policy {
+            text-align: center;
+            color: black;
+        }
+        
+        .Quality {
+            text-align: center;
+            color: black;
+        }
+        
+        .module {
+            background-size: cover;
+            width: 300px;
+            height: 200px;
+            margin: 0px 0 0 10px;
+            position: relative;
+            float: left;
+        }
+        
+        .top h2 {
+            background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+            width: 600px;
+            height: 400px;
+            color: goldenrod;
+            top: 80%;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .mid h2 {
+            background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+            width: 740px;
+            height: 400px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            padding: 20px;
+            color: gold;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 217%;
+            font-size: 2rem;
+            transform: translate(-50%, -50%);
+        }
+        
+        .cly {
+            color: white;
+            min-height: 400px;
+            text-align: center;
+            background-color: blue;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .cly2 {
+            font-style: italic;
+            color: gold;
+            font-weight: bolder;
+        }
+        
+        .halt {
+            color: blue;
+            font-size: 18px;
+            font-weight: bolder;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .Bamm {
+            width: 15%;
+        }
+        
+        .kell {
+            width: 5%;
+        }
+        
+        .prunus {
+            width: 10%;
+        }
+        
+        .loud {
+            width: 15%;
+        }
+        
+        .marq {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        
+        .md-box {
+            margin: 0px 0 0 10px;
+            font-style: italic;
+        }
+    </style> -->
 
 
-
-
-h2 {
-    color: black;
-    text-align: center; 
-    padding: 25px 0;
-    margin: 0;
-}
-    .home{
-     background-color: #ccc;
-    }
-    .container {
-      position: relative;
-      width: 100%;
-      height: max-content;
-      background-clip: cover;
-    }
-    
-    .image {
-      opacity: 1;
-      width: 100%;
-      transition: .5s ease;
-      backface-visibility: hidden;
-    }
-    
-    .middle {
-      transition: .5s ease;
-      opacity: 0;
-      position: absolute;
-      top: 50%;
-      left: 35%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      text-align: justify;
-    }
-    
-    .container:hover .image {
-      opacity: 0.3;
-    }
-    
-    .container:hover .middle {
-      opacity: 1;
-    }
-    
-    .text {
-      color: black;
-      font-weight: bold;
-      font-size: 24px;
-    }
-    .keys{
-        color: black;
-        font-weight: bold;
-    }
-    .Policy{
-        text-align: center;
-        color: black;
-    }
-    .Quality{
-        text-align: center;
-        color: black;
-    }
-    .module {
-  background-size: cover;
-  width: 300px;
-  height: 200px;
-  margin: 0px 0 0 10px;
-  position: relative;
-  float: left;
-}
-
-.top h2 {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    width: 600px;
-    height: 400px;
-  color: goldenrod;
-  top: 80%;
-  margin: 0;
-  padding: 20px;
-}
-
-.mid h2 {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-    width: 740px;
-    height: 400px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  padding: 20px;
-  color: gold;
-  margin: 0;
-  position: absolute;
-  top: 100%;
-  left: 217%;
-  font-size: 2rem;
-  transform: translate(-50%, -50%);
-}
-.cly{
-  color: white;
-  min-height: 400px;
-  text-align: center;
-  background-color: blue;
-  font-size: 24px;
-  font-weight: bold;
-}
-.cly2{
-  font-style: italic;
-  color: gold;
-  font-weight: bolder;
-}
-.halt{
-  color: blue;
-  font-size: 18px;
-  font-weight: bolder;
-  text-align: center;
-  font-style: italic;
-}
-.Bamm{
-  width: 15%;
-}
-.kell{
-  width: 5%;
-}
-.prunus{
-  width: 10%;
-}
-.loud{
-  width: 15%;
-}
-.marq{
-  padding-left: 15%;
-  padding-right: 15%;
-}
-.md-box{
-  margin: 0px 0 0 10px;
-  font-style: italic;
-}
-    </style>
     <section class="block-parallax-1">
-      <div class="parallax-bg"></div>
-      <div class="md-box">
-           <h1>We at MichRonia are Moving Businesses<br> To The Next LeveI Being the <br>
-            Top Tier Business Consulting</h1>
-      </div>
-  </section>
-      
-      <section class="cly">
-          <h2 class="cly2">You Are Our Top Priority</h2>
-   <p>We are a specialist consultancy dedicated to the online and on-site delivery of<br>
-      services to a global client base.With a track record of working with successful organisations,<br>
-       we've successfully helped clients to identify and deliver objectives that grow and<br> 
-       transform both businesses and teams.<br>
-       We know that adding sustainable value in a rapidly changing environment needs leadership,<br>
-       agility and engagement at all levels of your organisation.</p>
-      </section>
-  
-  <section class="block-parallax-1  block-parallax-2">
-      <div class="parallax-bg"></div>
-      <div class="md-box">
-           <h1>We offer best quality and wide range services.<br> Whatever the financial
-            service that is required, <br> Mich & Ronia is what you need.</h1>
-      </div>
-  </section>
+        <div class="parallax-bg"></div>
+        <div class="md-box">
+            <h1>We at MichRonia are Moving Businesses<br> To The Next LeveI Being the <br> Top Tier Business Consulting</h1>
+        </div>
+    </section>
+
+    <section class="cly">
+        <h2 class="cly2">You Are Our Top Priority</h2>
+        <p>We are a specialist consultancy dedicated to the online and on-site delivery of<br> services to a global client base.With a track record of working with successful organisations,<br> we've successfully helped clients to identify and deliver objectives
+            that grow and<br> transform both businesses and teams.<br> We know that adding sustainable value in a rapidly changing environment needs leadership,<br> agility and engagement at all levels of your organisation.</p>
+    </section>
+
+    <section class="block-parallax-1  block-parallax-2">
+        <div class="parallax-bg"></div>
+        <div class="md-box">
+            <h1>We offer best quality and wide range services.<br> Whatever the financial service that is required, <br> Mich & Ronia is what you need.</h1>
+        </div>
+    </section>
     <div class="module top">
-        <h2>We work with various partners from different regions in and out of
-            the country. Our team is rich in professional, motivated, and skilled
-            people, competent to respond to the present and future challenges as
-            the market gets more and more demanding.</h2>
-      </div>
-      
-      <div class="module mid">
-        <h2>Therefore, by choosing Mich & Ronia Consultants, a client is assured
-            of satisfaction, commitment, excellence, and above all, great service
-            experience</h2>
-      </div>
-      
+        <h2>We work with various partners from different regions in and out of the country. Our team is rich in professional, motivated, and skilled people, competent to respond to the present and future challenges as the market gets more and more demanding.</h2>
+    </div>
+
+    <div class="module mid">
+        <h2>Therefore, by choosing Mich & Ronia Consultants, a client is assured of satisfaction, commitment, excellence, and above all, great service experience
+        </h2>
+    </div>
+
     <br style="clear: both;">
     <br><br><br><br><br><br><br><br><br><br>
     <div>
-    <h2 class="Policy">Mich & Ronia Consultants</h2>
-    <p class="Quality">At Mich & Ronia Consultants we work closely with you to understand
-    what you want to achieve,<br> and meet your needs at every stage of
-    your personal and organization’s development with our full range of
-    services.</p></div>
-    
+        <h2 class="Policy">Mich & Ronia Consultants</h2>
+        <p class="Quality">At Mich & Ronia Consultants we work closely with you to understand what you want to achieve,<br> and meet your needs at every stage of your personal and organization’s development with our full range of services.
+        </p>
+    </div>
+
     <div class="container">
         <img src="{% static 'images/Back-Base.webp' %}" alt="" class="image">
-      <div class="middle">
-        <div class="text">
-            <h1 class="keys">Objectives and Key Results implementation, 
-            coaching and training services provided by Michronia Consultants.</h1>
-            Mich & Ronia consultants is legally established and complies with all
-            laws and regulations. We aspire to be the best perceived Small and
-            Medium; Audit, Tax and, Financial Advisory Firm in Kenya.
-            Our portfolio of Organizations is representative of all sectors of the
-            economy and comprises; State Corporations, Non- Governmental
-            Organizations (both Local and international), Finance services sector,
-            Partnerships, Limited liability Companies, Real Estate Property and,
-            Professional Practitioners among other categories of clientele we
-            serve.
-            Our team members are professionals who are highly qualified and
-            experienced and who have an established track record in their
-            respective areas of expertise.</div>
-      </div>
+        <div class="middle">
+            <div class="text">
+                <h1 class="keys">Objectives and Key Results implementation, coaching and training services provided by Michronia Consultants.</h1>
+                Mich & Ronia consultants is legally established and complies with all laws and regulations. We aspire to be the best perceived Small and Medium; Audit, Tax and, Financial Advisory Firm in Kenya. Our portfolio of Organizations is representative of all
+                sectors of the economy and comprises; State Corporations, Non- Governmental Organizations (both Local and international), Finance services sector, Partnerships, Limited liability Companies, Real Estate Property and, Professional Practitioners
+                among other categories of clientele we serve. Our team members are professionals who are highly qualified and experienced and who have an established track record in their respective areas of expertise.</div>
+        </div>
     </div>
     <br>
     <div>
-      <p class="halt">
-        Our loyal and long-term clients include;
+        <p class="halt">
+            Our loyal and long-term clients include;
         </p>
-      <p class="marq">
-        <!-- <marquee behaviour="scroll" scrollamount="15" onmouseover="this.stop();" onmouseout="this.start();"> -->
-        <img src="{% static 'images/Bamm.png' %}" class="Bamm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{% static 'images/kell.png' %}" class="kell">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{% static 'images/sibasi.png' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{% static 'images/lbc.png' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{% static 'images/electric.jpeg' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{% static 'images/loud.jpg' %}" class="loud">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="{% static 'images/prunus.webp' %}" class="prunus">
-      <!-- </marquee> -->
+        <p class="marq">
+            <!-- <marquee behaviour="scroll" scrollamount="15" onmouseover="this.stop();" onmouseout="this.start();"> -->
+            <img src="{% static 'images/Bamm.png' %}" class="Bamm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/kell.png' %}" class="kell">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/sibasi.png' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/lbc.png' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/electric.jpeg' %}" class="prunus">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/loud.jpg' %}" class="loud">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{% static 'images/prunus.webp' %}" class="prunus">
+            <!-- </marquee> -->
         </p>
     </div>
-</div>  
-{% endblock %}
-{% endblock %}
+</div>
+{% endblock %} {% endblock %}
+
 </html>
