@@ -1,101 +1,111 @@
-{% extends '../../base.html' %}
-{% load static %}
-{% block title %} Contact Us {% endblock %}
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% block css %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-{% endblock %}
-{% block body %}
-{% block conatct %}
-
-<style>
-   .contact-page{
-    height: fit-content; 
-  } 
-  .form-control.mt-2{
-    width: 80%;
-
-  }
-  .container.py-2.mt-3{
-    width: 70%;
-    margin-right: 10%;
-    margin-left: 25%;
-  }
-  .sched{
-    margin-left: 25%;
-  }
-  .adv{
-    font-size: 45px;
-    font-weight: bold;
-  }
-  .consultancy-location{
-    column-count: 2;
-  }
-  .mapouter{position:relative;text-align:right;height:500px;width:600px;}
-  .gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
-  .socials{color: black
-  }
-  /* .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  background: #bb0000;
-  color: white;
-} */
-
-.fa-instagram {
-   background: #f09433; 
-background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-}
-
-.fa-whatsapp {
-  background: #008000;
-  color: white;
-}
-
-.fa-skype {
-  background: #00aff0;
-  color: white;
-}
-</style>
+{% extends '../../base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}"> {% endblock %}
+<!-- <style>
+    /* .contact-page {
+        height: fit-content;
+    }
+    
+    .form-control.mt-2 {
+        width: 80%;
+    }
+    
+    .container.py-2.mt-3 {
+        width: 70%;
+        margin-right: 10%;
+        margin-left: 25%;
+    }
+    
+    .sched {
+        margin-left: 25%;
+    }
+    
+    .adv {
+        font-size: 45px;
+        font-weight: bold;
+    }
+    
+    .consultancy-location {
+        column-count: 2;
+    }
+    
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 500px;
+        width: 600px;
+    }
+    
+    .gmap_canvas {
+        overflow: hidden;
+        background: none!important;
+        height: 500px;
+        width: 600px;
+    }
+    
+    .socials {
+        color: black
+    }
+    
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 70px;
+        text-align: center;
+        background: #bb0000;
+        color: white;
+        border-radius: 50%;
+    }
+    
+    .fa-instagram {
+        background: #f09433;
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    }
+    
+    .fa-whatsapp {
+        background: #008000;
+        color: white;
+    }
+    
+    .fa-skype {
+        background: #00aff0;
+        color: white;
+    } */
+</style> -->
+{% block body %} {% block contact %}
 <br><br>
 <div class="contact-page">
 
-<div class="sched"><p class="adv">Schedule a call with us today <br>and experience professionalism.<br></p>Questions need answers. 
- Sometimes you may not know what questions to ask,<br> what is possible or how to take the first step.<br> <br>
- That's why scheduling a call will help us to understand the key elements, 
- scope out what is possible, <br>and in doing so, help you take the first steps.<br><br> So schedule a call today,
- tomorrow, or at another time that suits you.<br><br>
-</div>
+    <div class="sched">
+        <p class="adv">Schedule a call with us today <br>and experience professionalism.<br></p>Questions need answers. Sometimes you may not know what questions to ask,<br> what is possible or how to take the first step.<br> <br> That's why scheduling a call will help
+        us to understand the key elements, scope out what is possible, <br>and in doing so, help you take the first steps.<br><br> So schedule a call today, tomorrow, or at another time that suits you.<br><br>
+    </div>
 
-<div class="container py-2 mt-3">
-    <h2>Contact Us</h2>
+    <div class="container py-2 mt-3">
+        <h2>Contact Us</h2>
 
-<form method="post">{% csrf_token %}   {{form.as_p}}
+        <form method="post">{% csrf_token %} {{form.as_p}}
 
- <div class="form-group mt-2">
-   <label>Name</label>
-   <input type="text" class="form-control mt-2" id="full_name" name="full_name" placeholder="Enter Your Name"/>
- </div>
+            <div class="form-group mt-2">
+                <label>Name</label>
+                <input type="text" class="form-control mt-2" id="full_name" name="full_name" placeholder="Enter Your Name" />
+            </div>
 
- <div class="form-group mt-2">
-   <label>Email</label>
-   <input type="email" class="form-control mt-2" id="email_address" name="email_address" placeholder="Enter Your Email">
- </div>
+            <div class="form-group mt-2">
+                <label>Email</label>
+                <input type="email" class="form-control mt-2" id="email_address" name="email_address" placeholder="Enter Your Email">
+            </div>
 
- <div class="form-group mt-2">
-   <label>Phone</label>
-   <input type="number" class="form-control mt-2" id="phone_number" name="phone_number" placeholder="Enter Your Phone Number">
- </div>
+            <div class="form-group mt-2">
+                <label>Phone</label>
+                <input type="number" class="form-control mt-2" id="phone_number" name="phone_number" placeholder="Enter Your Phone Number">
+            </div>
 
- <div class="form-group mt-2">
-   <label >Choose service:</label>
-   <select class="form-control mt-2" name="service" id="service">
+            <div class="form-group mt-2">
+                <label>Choose service:</label>
+                <select class="form-control mt-2" name="service" id="service">
    <option value="tax">Tax</option>
    <option value="book-keeping">Book-keeping</option>
    <option value="financial-advisory">Financial-advisory</option>
@@ -103,46 +113,43 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
    <option value="other">other</option>
    </select>
 
-  </div>
-
-        
-  <div class="form-group mt-2">
-   <label>How May We Help You ?</label>
-   <textarea class="form-control mt-2" id="message" name="message" rows="3"></textarea>
- </div>
-
- <button type="submit" style="background-color: #8c5d4f; color: white; width: 8rem;" class="btn mt-4">Submit</button>
-
- 
-</form>
-</div>
+            </div>
 
 
-<div class="consultancy-location">
+            <div class="form-group mt-2">
+                <label>How May We Help You ?</label>
+                <textarea class="form-control mt-2" id="message" name="message" rows="3"></textarea>
+            </div>
 
-<div class="mapouter">
-  <div class="gmap_canvas">
-  <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kiambu%20road&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> 
+            <button type="submit" style="background-color: #8c5d4f; color: white; width: 8rem;" class="btn mt-4">Submit</button>
+
+
+        </form>
+    </div>
+
+
+    <div class="consultancy-location">
+
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kiambu%20road&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> 
   </iframe>
-  <a href="https://www.embedgooglemap.net"></a> 
-</div>
-</div>
+                <a href="https://www.embedgooglemap.net"></a>
+            </div>
+        </div>
 
-<div class="socials">
- <h2> Follow us on </h2>  
- <!-- Add font awesome icons -->
-<a href="#" class="fa fa-facebook"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-linkedin"></a><br><br>
-<a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-whatsapp"></a>
-<a href="#" class="fa fa-skype"></a>
+        <div class="socials">
+            <h2> Follow us on </h2>
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a><br><br>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+            <a href="#" class="fa fa-skype"></a>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-{% endblock %}
-{% endblock %}
-
-
+{% endblock %}{% endblock %}

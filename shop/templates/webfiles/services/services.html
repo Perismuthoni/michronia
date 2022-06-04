@@ -1,159 +1,155 @@
-{% extends '../../base.html' %}
-{% load static %}
+{% extends '../../base.html' %} {% load static %} {% block head %}
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% block css %}
-{% endblock %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'css/services.css' %}">
-{% block body %}
-
-{% block services %}
+<meta name="viewport" content="width=device-width, initial-scale=1"> {% endblock %} {% block body %} {% block services %}
+<!-- 
 <style>
-.services{
-  background-color: #fff;
-}
-.Serve{
-  padding-left: -20px;
-  text-align: center;
-  text-indent: 30px;
-}
-.text1{
-  text-align: center;
-}
-* {
-  box-sizing: border-box;
-}
-.row{
-  width: 100%;
-  align-content: center;
-  padding-top: 0px;
-}
-.row a{
-  color: goldenrod;
-}
-
-
-/* Create four equal columns that floats next to each other */
-.column {
-  color: white;  
-  margin-left: 50px;
-  height: 450px; 
-  overflow: hidden;
-  width: 20%;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  transition: transform .2s;
-}
-.column:hover{
-  -ms-transform: scale(110%); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(110%);
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media screen and (max-width: 600px) {
-  .column {
-    margin: auto;
-  }
-  
-}
-.keep{
-  font-weight: bold;
-  font-size: 20px;
-  margin-left: -5%;
-  margin-right: -5%;
-  text-align: center;
-  background-image: linear-gradient(to right, #152238,#292f38, gold);
-}
-.keep:hover{
-  -ms-transform: scale(105%); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-  transform: scale(105%);
-}
+    .services {
+        background-color: #fff;
+    }
+    
+    .Serve {
+        padding-left: -20px;
+        text-align: center;
+        text-indent: 30px;
+    }
+    
+    .text1 {
+        text-align: center;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .row {
+        width: 100%;
+        align-content: center;
+        padding-top: 0px;
+    }
+    
+    .row a {
+        color: goldenrod;
+    }
+    /* Create four equal columns that floats next to each other */
+    
+    .column {
+        color: white;
+        margin-left: 50px;
+        height: 450px;
+        overflow: hidden;
+        width: 20%;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        transition: transform .2s;
+    }
+    
+    .column:hover {
+        -ms-transform: scale(110%);
+        /* IE 9 */
+        -webkit-transform: scale(1.5);
+        /* Safari 3-8 */
+        transform: scale(110%);
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            margin: auto;
+        }
+    }
+    
+    .keep {
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: -5%;
+        margin-right: -5%;
+        text-align: center;
+        background-image: linear-gradient(to right, #152238, #292f38, gold);
+    }
+    
+    .keep:hover {
+        -ms-transform: scale(105%);
+        /* IE 9 */
+        -webkit-transform: scale(1.5);
+        /* Safari 3-8 */
+        transform: scale(105%);
+    }
 </style>
+ -->
+
 <div class="services" style="background-color: #ccc;">
-  <br><br>
-<h1 class="Serve" style="text-align: center;"> Michronia Services </h1>
-<p class="text1" style="background-color: #ccc; width: 50em; margin-left: auto; margin-right: auto; font-weight: bold;">
-    Michronia offers four main services for clients - Orientation, Training, Coaching and
-     full Implementation engagements - available via both online and on-site delivery.  
-     We don't set minimum or maximum limits on either the size of our clients or the extent 
-     of the assistance they might need, and each assignment we work on is tailored accordingly.  
-     Please contact us for further information.
-</p><br>
-<div class="row">
-    <div class="column" style="background-color: navy; width: 20%;">
-      <div class="keep">BOOK <br> KEEPING</div>
-      <p><br>Bookkeeping is the process of recording financial transactions on a day-to-day 
-          basis by a business. It helps to ensure that the records of every individual financial 
-          transaction are up-to-date and accurate.<hr/>
-          <ul>
-            We offer
-            <li>Outsourced accounting </li>
-            <li>compilation </li>
-          </ul>
-          <a href="/keeping/"> learn more</a>
+    <br><br>
+    <h1 class="Serve" style="text-align: center;"> Michronia Services </h1>
+    <p class="text1" style="background-color: #ccc; width: 50em; margin-left: auto; margin-right: auto; font-weight: bold;">
+        Michronia offers four main services for clients - Orientation, Training, Coaching and full Implementation engagements - available via both online and on-site delivery. We don't set minimum or maximum limits on either the size of our clients or the extent
+        of the assistance they might need, and each assignment we work on is tailored accordingly. Please contact us for further information.
+    </p><br>
+    <div class="row">
+        <div class="column" style="background-color: navy; width: 20%;">
+            <div class="keep">BOOK <br> KEEPING</div>
+            <p><br>Bookkeeping is the process of recording financial transactions on a day-to-day basis by a business. It helps to ensure that the records of every individual financial transaction are up-to-date and accurate.
+                <hr/>
+                <ul>
+                    We offer
+                    <li>Outsourced accounting </li>
+                    <li>compilation </li>
+                </ul>
+                <a href="/keeping/"> learn more</a>
 
-        
-        </p>
+
+            </p>
+        </div>
+        <div class="column" style="background-color: navy; width: 20%;">
+            <div class="keep">FORENSIC <br> ACCOUNTANCY</div>
+            <p><br>Forensic accounting utilizes accounting, auditing, and investigative skills to conduct an examination into the finances individuals or business. Forensic accounting provides an accounting analysis suitable to be used in legal proceedings.
+                <hr/>
+
+                <ul>
+                    We offer
+                    <li> service 1 </li>
+                    <li> service 2 </li>
+                    <li>service 3 </li>
+                </ul>
+                <a href="/Accountancy/"> learn more</a>
+            </p>
+        </div>
+        <div class="column" style="background-color: navy; width: 20%;">
+            <div class="keep">TAX <br>CONSULTANCY</div>
+            <p><br>Preparing your tax return Looking for deductions to lower your tax burden Minimizing your tax liability in retirement Dealing with taxes on rental property income
+                <hr/>
+                <ul>
+                    We cover:
+                    <li>Individual tax </li>
+                    <li>Corporate tax </li>
+                    <li>Partnership tax </li>
+                    <li>Estate & Trust tax </li>
+                </ul>
+                <a href="/consultancy/"> learn more</a>
+            </p>
+        </div>
+        <div class="column" style="background-color: navy; width: 20%;">
+            <div class="keep">FINANCIAL <br>ADVISORY</div>
+            <p><br>A financial advisor is not just someone who manages your investments. An advisor can help you figure out your savings, how to build for retirement, help with estate planning, and others. If however you only need to discuss portfolio allocations,
+                they can do that too
+                <hr/>
+                <ul>
+                    we help with;
+                    <li> merger & acquisition </li>
+                    <li>financial crisis </li>
+                </ul>
+                <a href="/Advisory/"> learn more</a>
+            </p>
+        </div>
     </div>
-    <div class="column" style="background-color: navy; width: 20%;">
-      <div class="keep">FORENSIC <br> ACCOUNTANCY</div>
-      <p><br>Forensic accounting utilizes accounting, auditing, and investigative 
-          skills to conduct an examination into the finances individuals or business. 
-          Forensic accounting provides an accounting analysis suitable to be used in legal proceedings.<hr/> 
-        
-          <ul>
-            We offer
-            <li> service 1 </li>
-            <li> service 2 </li>
-            <li>service 3 </li>
-          </ul>
-          <a href="/Accountancy/"> learn more</a>
-        </p>
+    <br><br>
+    <div>
+        <img src="{% static 'images/sky3.jpg' %}" style="width:100%;">
     </div>
-    <div class="column" style="background-color: navy; width: 20%;">
-      <div class="keep">TAX <br>CONSULTANCY</div>
-      <p><br>Preparing your tax return
-        Looking for deductions to lower your tax burden
-        Minimizing your tax liability in retirement
-        Dealing with taxes on rental property income<hr/>
-        <ul>
-          We cover:
-          <li>Individual tax </li>
-          <li>Corporate tax </li>
-          <li>Partnership tax </li>
-          <li>Estate & Trust tax </li>
-        </ul>
-        <a href="/consultancy/"> learn more</a>
-      </p>
-    </div>
-    <div class="column" style="background-color: navy; width: 20%;">
-      <div class="keep">FINANCIAL <br>ADVISORY</div>
-      <p><br>A financial advisor is not just someone who manages your investments. 
-          An advisor can help you figure out your savings, how to build for retirement,
-           help with estate planning, and others. If however you only need to discuss portfolio allocations, 
-           they can do that too<hr/>
-           <ul>
-           we help with; 
-            <li> merger & acquisition </li>
-            <li>financial crisis </li>
-          </ul>
-          <a href="/Advisory/"> learn more</a>
-          </p>
-    </div>
-  </div>
-  <br><br>
-  <div>
-    <img src="{% static 'images/sky3.jpg' %}" style="width:100%;">
-  </div>
 </div>
-{% endblock %}
-{% endblock %}
-
-
+{% endblock %} {% endblock %}
