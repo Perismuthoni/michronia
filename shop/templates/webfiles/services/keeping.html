@@ -1,28 +1,23 @@
-{% extends '../../base.html' %}
-{% load static %}
-<!doctype html>
+{% extends '../../base.html' %} {% load static %} {% block head %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{% block css %}
-{% endblock %}
-<title>Mich&Ronia</title>
-{% block head %} 
-{% endblock %}
-{% block body %}
-{% block home %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/keeping.css' %}"> } {% endblock %} {% block body %} {% block keeping %}
 <div class="home">
     <style>
-        .home{
+        .home {
             background-color: #fff;
         }
+        
         * {
-  box-sizing: border-box;
-}
- body {
+            box-sizing: border-box;
+        }
+        
+        body {
             animation: fadeInAnimation ease 2s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
         }
+        
         @keyframes fadeInAnimation {
             0% {
                 opacity: 0.1;
@@ -31,55 +26,49 @@
                 opacity: 1;
             }
         }
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; 
-}
-.keep{
-  text-align: center;
-  font-style: italic;
-}
-.row{
-  margin-left: 5%;
-  margin-right: 5%;
-}
+        /* Create two equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+        
+        .keep {
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .row {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     </style>
     <br>
     <h2 class="keep">From Us To You...</h2>
 
     <div class="row">
-      <div class="column" style="background-color:#fff;">
-        <h2>BOOK KEEPING</h2>
-        <p>Bookkeeping is a process of recording and organizing all 
-          the business transactions that have occurred in the course of the business.
-          Bookkeeping is an integral part of accounting and largely focuses on recording 
-          day-to-day financial transaction of the business. It ensures that the records of 
-          each financial transaction are up-to-date, correct and comprehensive.<br>
-          Bookkeeping helps you budget for your business, prepare for tax returns, 
-          keep your business organized and so much more. 
-          It's something you shouldn't avoid if you want to keep your finances in check.
+        <div class="column" style="background-color:#fff;">
+            <h2>BOOK KEEPING</h2>
+            <p>Bookkeeping is a process of recording and organizing all the business transactions that have occurred in the course of the business. Bookkeeping is an integral part of accounting and largely focuses on recording day-to-day financial transaction
+                of the business. It ensures that the records of each financial transaction are up-to-date, correct and comprehensive.<br> Bookkeeping helps you budget for your business, prepare for tax returns, keep your business organized and so much
+                more. It's something you shouldn't avoid if you want to keep your finances in check.
 
-        </p>
-      </div>
-      <div class="column" style="background-color:#fff;">
-        <h2>It basically involves;</h2>
-        <p>
-          1) analyzing financial transactions and assigning them to specific accounts;<br> 
-          2) writing original journal entries that credit and debit the appropriate accounts; <br>
-          3) posting entries to ledger accounts; and <br>
-          4) adjusting entries at the end of each accounting period.
-          </p>
-          </div>
+            </p>
+        </div>
+        <div class="column" style="background-color:#fff;">
+            <h2>It basically involves;</h2>
+            <p>
+                1) analyzing financial transactions and assigning them to specific accounts;<br> 2) writing original journal entries that credit and debit the appropriate accounts; <br> 3) posting entries to ledger accounts; and <br> 4) adjusting entries
+                at the end of each accounting period.
+            </p>
+        </div>
         <br>
-      </div>
     </div>
-    <div>
-      <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
-    </div>
-{% endblock%}
-{% endblock %}
 </div>
-</html>
+<div>
+    <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
+</div>
+</div>
+{% endblock%} {% endblock %}
