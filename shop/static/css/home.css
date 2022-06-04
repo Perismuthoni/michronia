@@ -113,10 +113,13 @@
     background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg"); 
     background-size: cover;
     width: 100%;
+    font-weight: 900;
     height: inherit;
-    color: #daa520; 
-    margin-left: 2%;  
-   
+    font-size: 2rem;
+    color: gold; 
+    margin-left: 1%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .mid  {
@@ -128,7 +131,8 @@
     font-weight: 900;
     color: gold;    
     font-size: 2rem;
-    margin-right: 2%;  
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
 }
 
 .cly {
