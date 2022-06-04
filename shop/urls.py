@@ -13,6 +13,7 @@ urlpatterns = [
       path("Advisory/", views.Advisory, name="Advisory"),
     path("about/", views.about, name="about"), 
      path("contact/", views.contact, name="contact"), 
+     path("testimonials/", views.testimonials, name="testimonials"), 
      
      
     path("search/", views.search, name="search"),  

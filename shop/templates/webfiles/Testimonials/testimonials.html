@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head%} {% block title %}Testimonials{% endblock%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/testimonials.css' %}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock%}
+{% block body %}
+{% block testimonials %}
+<br>
+<h2 class="tests">What our clients say;</h2>
+
+<div class="row">
+  <div class="column left">
+   
+    <p class="testimonials-text">It has been great working with you, <br>a team of proffesionals who are committed 
+        <br>to deliver their service effectively and efficiently.</p>
+  </div>
+  <div class="column right">
+    
+    <p class="testimonials-text">Humfrey Njau <br>
+        CEO & Founder Electric Fences Kenya</p>
+  </div>
+</div><br>
+<div class="row">
+  <div class="column left">
+    
+    <p class="testimonials-text">Since we contracted Mich&Ronia Consultants in our day to day accounting and 
+        book keeping operations, you have ensured accurate reporting 
+        and also enable us to make informed decisions.</p>
+  </div>
+  <div class="column right">
+    
+    <p class="testimonials-text">Julian Macharia<br>
+        Director, Julian Consulting</p>
+  </div>
+</div><br>
+<div class="row">
+  <div class="column left">
+    
+    <p class="testimonials-text">I now concentrate on my core business objectives.
+        Outsourcing of this non-core business operations is the way to go. 
+        Thank you Mich&Ronia, you really work tirelessly to ensure accuracy 
+        and compliance with the relevant Laws.</p>
+  </div>
+  <div class="column right">
+    
+    <p class="testimonials-text">Francis Kinyajui <br>
+        Director at Bamm Tours Ltd.</p>
+  </div>
+</div>
+<div>
+    <img src="{% static 'images/Back-Base.webp' %}" style="width:100%;">
+  </div>
+{% endblock %}
+{% endblock %}
+

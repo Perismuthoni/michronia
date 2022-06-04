@@ -30,6 +30,8 @@ def Advisory(request):
 
 def about(request):
     return render(request, "webfiles/about_us/about_us.html",)
+def testimonials(request):
+    return render(request, "webfiles/Testimonials/testimonials.html",)
 
 def contact(request):
     if request.method=="POST":       
@@ -70,19 +72,7 @@ def contact(request):
         
 		
 				
-			
-      
-	
-	
-
-
-
-
-
-
-
-
-
+    
 
 
 
