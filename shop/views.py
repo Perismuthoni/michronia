@@ -19,14 +19,14 @@ def home(request):
 def services(request):
     return render(request, "webfiles/services/services.html",)
 def keeping(request):
-    return render(request, "webfiles/keeping/keeping.html",)
+    return render(request, "webfiles/services/keeping.html",)
 def consultancy(request):
-    return render(request, "webfiles/consultancy/consultancy.html",)
+    return render(request, "webfiles/services/consultancy.html",)
 
 def Accountancy(request):
-    return render(request, "webfiles/Accountancy/Accountancy.html",)
+    return render(request, "webfiles/services/Accountancy.html",)
 def Advisory(request):
-    return render(request, "webfiles/Advisory/Advisory.html",)
+    return render(request, "webfiles/services/Advisory.html",)
 
 def about(request):
     return render(request, "webfiles/about_us/about_us.html",)
