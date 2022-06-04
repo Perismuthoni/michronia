@@ -32,31 +32,25 @@
             </div>
         </div>
         <a style="color: gold; font-weight: bolder;" href="/contact/">CONTACT US</a>
-<<<<<<< HEAD
-        <a style="color: gold; font-weight: bolder;" href="/about/">ABOUT US</a>        
-       <a style="color: gold; font-weight: bolder;" href="/testimonials/">TESTIMONIALS</a> 
-        </div></div> <br><br><br>
-
-
-        <script>
-          function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "navbar") {
-              x.className += " responsive";
-            } else {
-              x.className = "navbar";
-            }
-          }
-          </script>
-
-
-    {% block body %}{% endblock %}
-=======
         <a style="color: gold; font-weight: bolder;" href="/about/">ABOUT US</a>
-        <a style="color: gold; font-weight: bolder;" href="/about/">TESTIMONIALS</a>
+        <a style="color: gold; font-weight: bolder;" href="/testimonials/">TESTIMONIALS</a>
     </div>
-</div> <br><br><br> {% block body %}{% endblock %}
->>>>>>> 1ac45ec9efc697ef70042b212c1deddf397d17c1
+</div> <br><br><br>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
+
+
+{% block body %}{% endblock %}
 <div class="footer" style="position: static;">
     <p>Mich & Ronia Consultants || +254727336411 || Email: michroniaconsultants@gmail.com</p>
     <p>Copyright © 2022 Mich&Ronia Consultants | Powered by Pollad-Technologies </p>
