@@ -3,6 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+.home{
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #ccc;
+}
 
 .block-parallax-1 {
     overflow: hidden;
@@ -39,17 +44,14 @@
     background-image: url("/static/images/city.jpg");
 }
 
-h2 {
-    color: black;
-    text-align: center;
-    padding: 25px 0;
-    margin: 0;
-}
 
+<<<<<<< HEAD
 .home {
     background-color: #ccc;
     max-width: 100vw;
 }
+=======
+>>>>>>> e39d045d8f630cb0224775e301131e0b0822ab2d
 
 .container {
     position: relative;
@@ -107,38 +109,33 @@ h2 {
     color: black;
 }
 
-.module {
+.module {    
+    width: 100vw;
+    height: 400px;
+    column-count: 2;
+    text-align: center;
+}
+
+.top {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg"); 
     background-size: cover;
-    width: 300px;
-    height: 200px;
-    /* margin: 0px 0 0 10px; */
-    position: relative;
-    float: left;
+    width: 100%;
+    height: inherit;
+    color: #daa520; 
+    margin-left: 2%;  
+   
 }
 
-.top h2{
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg");
-    width: 600px;
-    height: 400px;
-    color: goldenrod;
-    top: 80%;
-    padding: 20px;
-    margin-left: 5%;
-}
-
-.mid h2{
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg");
-    width: 600px;
-    height: 400px;
+.mid  {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg"); 
+    background-size: cover;
+    width: 100%;
+    height: inherit;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    padding: 20px;
-    color: gold;
-    position: absolute;
-    top: 100%;
-    left: 200%;
+    color: gold;    
     font-size: 2rem;
-    transform: translate(-50%, -50%);
+    margin-right: 2%;  
 }
 
 .cly {
