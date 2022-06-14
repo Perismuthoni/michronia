@@ -18,7 +18,26 @@ SECRET_KEY = 'ujsx7y@d*q^b)ta6v6=v!3)ut4e0-zsg6xtlfp3qirfp5$#(3q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [michronia.herokuapp.com]
+CSRF_COOKIE_SECURE = True
+
+# security.W012
+SESSION_COOKIE_SECURE = True
+
+# security.W008
+SECURE_SSL_REDIRECT = True
+
+# security.W004
+SECURE_HSTS_SECONDS = 31536000 # One year in seconds
+
+# Another security settings
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+
+ALLOWED_HOSTS = ['localhost',
+  '127.0.0.1','https://michronia.herokuapp.com','*']
+
 
 
 # Application definition
