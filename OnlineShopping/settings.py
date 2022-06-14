@@ -137,9 +137,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '/static')
 MEDIA_URL = '/media/'
 
 
-STATIC_URL = '/static/'
+STATIC_URL = "/MICHRONIA/shop/static/"
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/static")
+    os.path.join(BASE_DIR, "shop/static/")
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
