@@ -36,7 +36,7 @@ SECURE_HSTS_PRELOAD = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
 
-ALLOWED_HOSTS =[]
+ALLOWED_HOSTS =['https://michronia.herokuapp.com/', '127.0.0.1', '*']
 
 
 # Application definition
@@ -135,11 +135,11 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR, '/static')
 MEDIA_URL = '/media/'
 
-STATIC_ROOT=os.path.join(BASE_DIR, "static")
+# STATIC_ROOT=os.path.join(BASE_DIR, "static")
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS =(os.path.join(BASE_DIR, 'static'))
+STATICFILES_DIRS =[os.path.join(BASE_DIR, 'shop/static')]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
