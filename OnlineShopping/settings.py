@@ -1,12 +1,17 @@
-from pathlib import Path
-from django.conf import settings
+# from pathlib import Path
+# from django.conf import settings
 import os
+import django_heroku
  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-os.path.join(os.path.dirname(os.path.dirname(__file__)),'media/documents/GDRAT.xls')
-base_dir =settings.MEDIA_ROOT
+# os.path.join(os.path.dirname(os.path.dirname(__file__)),'media/documents/GDRAT.xls')
+# base_dir =settings.MEDIA_ROOT
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = Path(__file__).resolve().parent.parent
+
  
  
 # Quick-start development settings - unsuitable for production
@@ -137,12 +142,24 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '/static')
 MEDIA_URL = '/media/'
  
  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "/static")
-]
+
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "/static")
+# ]
  
+ 
+ 
+ 
+
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+django_heroku.settings(locals())
  
  
 
