@@ -41,7 +41,8 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
  
  
 ALLOWED_HOSTS = ['localhost',
-  '127.0.0.1','https://michronia.herokuapp.com','*']
+  '127.0.0.1','michronia.herokuapp.com ','*']
+
  
  
  
