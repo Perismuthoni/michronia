@@ -39,7 +39,7 @@ def contact(request):
         email = request.POST['email']
         phone = request.POST['phone']
         desc = request.POST['desc']
-        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact = contact(name=name, email=email, phone=phone, desc=desc)
         contact.save()
         alert = True
         return render(request, 'webfiles/contact_us/contact.html', {'alert':alert})
@@ -131,7 +131,7 @@ def loggedin_contact(request):
         email = request.user.email
         phone = request.user.customer.phone_number
         desc = request.POST['desc']
-        contact = Contact(name=name, email=email, phone=phone, desc=desc)
+        contact = contact(name=name, email=email, phone=phone, desc=desc)
         contact.save()
         alert = True
         return render(request, 'webfiles/auth/loggedin_contact.html', {'alert':alert})
@@ -156,7 +156,7 @@ def register(request):
                 return render(request, "webfiles/auth/register.html", {'alert':alert})
             
             user = User.objects.create_user(username=username, password=password1, email=email)
-            customers = Customer.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
+            customers = customers.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
             user.save()
             customers.save()
             return render(request, "webfiles/auth/login.html")
@@ -183,8 +183,8 @@ def registerbsn(request):
                 return render(request, "webfiles/auth/registerbsn.html", {'alert':alert})
             
             user = User.objects.create_user(username=username, password=password1, email=email )
-            customers = Customer.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
-            business = Business.objects.create(user=user, name=bsn_name, phone_number=phone_number,bsn_location= bsn_location,bsn_type=bsn_type,  email=email,owner_email =owner_email,owner=full_name,)
+            customers = customers.objects.create(user=user, name=full_name, phone_number=phone_number, email=email)
+            business = business.objects.create(user=user, name=bsn_name, phone_number=phone_number,bsn_location= bsn_location,bsn_type=bsn_type,  email=email,owner_email =owner_email,owner=full_name,)
             user.save()
             customers.save()
             business.save()
