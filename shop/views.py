@@ -89,7 +89,7 @@ def search(request):
     cartItems = data['cartItems']
     if request.method == "POST":
         search = request.POST['search']
-        products = Product.objects.filter(name__contains=search)
+        products = products.objects.filter(name__contains=search)
         return render(request, "search.html", {'search':search, 'products':products, 'cartItems':cartItems})
     else:
         return render(request, "search.html")

@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.home{
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.block-parallax-1 {
+    overflow: hidden;
+    position: relative;
+}
+
+.block-parallax-1 .parallax-bg {
+    background-attachment: fixed;
+    background-image: url("/static/images/citywall.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    min-width: 1170px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.block-parallax-1 .md-box {
+    padding: 200px 0 200px;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    height: 100%;
+    text-align: left;
+}
+
+.block-parallax-1 .md-box h1 {
+    color: #fff;
+}
+
+.block-parallax-2 .parallax-bg {
+    background-image: url("/static/images/city.jpg");
+}
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    -webkit-background-clip: cover;
+    background-clip: cover;
+}
+
+.image {
+    opacity: 1;
+    width: 100%;
+    transition: .5s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.keys {
+    color: black;
+    font-weight: bold;
+}
+
+.Policy {
+    text-align: center;
+    color: black;
+}
+
+.Quality {
+    text-align: center;
+    color: black;
+}
+
+.module {    
+    width: 100vw;
+    height: 400px;
+    column-count: 2;
+    text-align: center;
+}
+
+.top {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg"); 
+    background-size: cover;
+    width: 100%;
+    font-weight: 900;
+    height: inherit;
+    font-size: 2rem;
+    color: gold; 
+    margin-left: 1%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.mid  {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/sky2.jpg"); 
+    background-size: cover;
+    width: 100%;
+    height: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: gold;    
+    font-size: 2rem;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
+}
+
+.cly {
+    color: white;
+    min-height: 400px;
+    text-align: center;
+    background-color: blue;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cly2 {
+    font-style: italic;
+    color: gold;
+    font-weight: bolder;
+}
+
+.halt {
+    color: blue;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
+.Bamm {
+    width: 15%;
+}
+
+.kell {
+    width: 5%;
+}
+
+.prunus {
+    width: 10%;
+}
+
+.loud {
+    width: 15%;
+}
+
+.marq {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.md-box {
+    margin: 0px 0 0 10px;
+    font-style: italic;
+}
