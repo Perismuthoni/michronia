@@ -132,14 +132,14 @@ USE_TZ = True
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '/static')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/shop/static')
 MEDIA_URL = '/media/'
 
 # STATIC_ROOT=os.path.join(BASE_DIR, "static")
 
-STATIC_URL = '/static/'
+STATIC_URL = '/shop/static/'
 
-STATICFILES_DIRS =[os.path.join(BASE_DIR, 'shop/static')]
+STATICFILES_DIRS =[os.path.join(BASE_DIR, '/shop/static')]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
