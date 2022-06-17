@@ -18,13 +18,13 @@ SECRET_KEY = 'ujsx7y@d*q^b)ta6v6=v!3)ut4e0-zsg6xtlfp3qirfp5$#(3q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
 
 # security.W012
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 
 # security.W008
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 
 # security.W004
 SECURE_HSTS_SECONDS = 31536000 # One year in seconds
@@ -37,8 +37,6 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 ALLOWED_HOSTS = ['localhost',
   '127.0.0.1','https://michronia.herokuapp.com','*']
-
-
 
 # Application definition
 
@@ -133,7 +131,7 @@ USE_TZ = True
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
