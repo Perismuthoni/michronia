@@ -16,15 +16,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'ujsx7y@d*q^b)ta6v6=v!3)ut4e0-zsg6xtlfp3qirfp5$#(3q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
 
 # security.W012
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = True
 
 # security.W008
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 
 # security.W004
 SECURE_HSTS_SECONDS = 31536000 # One year in seconds
@@ -35,9 +35,11 @@ SECURE_HSTS_PRELOAD = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
 
-ALLOWED_HOSTS = ['*']
-#'localhost',
-  #'127.0.0.1','https://michronia.herokuapp.com','*'
+ALLOWED_HOSTS = ['localhost',
+  '127.0.0.1','https://michronia.herokuapp.com','*']
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,7 +55,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -132,14 +133,13 @@ USE_TZ = True
 
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, '/static')
 MEDIA_URL = '/media/'
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'shop/static')
+    os.path.join(BASE_DIR, "shop/static/")
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
