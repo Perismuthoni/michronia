@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/keeping.css' %}"> } {% endblock %} {% block body %} {% block keeping %}
 <div class="home">
     <style>
-      /*  .home {
+        .home {
             background-color: #fff;
         }
         
@@ -26,7 +26,7 @@
                 opacity: 1;
             }
         }
-        /* Create two equal columns that floats next to each other
+        /* Create two equal columns that floats next to each other */
         
         .column {
             float: left;
@@ -43,7 +43,7 @@
         .row {
             margin-left: 5%;
             margin-right: 5%;
-        }*/
+        }
     </style>
     <br>
     <h2 class="keep">From Us To You...</h2>
@@ -68,7 +68,7 @@
     </div>
 </div>
 <div>
-    <img src="static/images/trends.jpg" alt="" height="140px" width="100%">
+    <img src="{% static 'images/trends.jpg' %}" alt="" height="140px" width="100%">
 </div>
 </div>
 {% endblock%} {% endblock %}
